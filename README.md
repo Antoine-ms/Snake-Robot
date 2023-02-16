@@ -1,6 +1,6 @@
 # Snake-Robot
 
-Execute the script first in order to set all the model parameters
+Execute the script first in order to set all the model parameters.
 
 
 The 1st model (Snake_Robot_v1) is based on anisotropic friction. The snake body moves as it should but it is not moving forward. It is probably coming from the friction parameters but I coulnd't make it work yet. 
