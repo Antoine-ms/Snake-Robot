@@ -1,23 +1,32 @@
 clear variables
 clc
 
-% This script set all the paramaters for the model
+% Set all the paramaters for the model
 
 %% Model parameters
 
-mu_static = 0.43 % not used in the anisotropic friction model
-mu_dynamic=0.2 % not used in the anisotropic friction model
+%mu_static = 0.43 % not used in the anisotropic friction model
+%mu_dynamic=0.2 % not used in the anisotropic friction model
 
-amplitude=0.7
-frequency = 2 % rad/s
-phase = pi/3 % rad
+amplitude=2
+frequency = 4 % rad/s
+phase = 1.4 % rad
 
 % Friction for the anisotropic model
-friction_x = 0.1
-friction_y = 0.1
+friction_x = -0.05
+friction_y = -5
+
+% Internal joint paramaters
+internal_stiffness = 0.85
+
+% Joints limit parameters
+spring_stiffness = 1e4
+joint_damp = 10
+
+
 
 %% Setting the Serpenoid Curve
-
+%{
 arcs = 20; % mm, arc length of the serpenoid curve 
 alpha = 0.8; % rad, bending angle of the serpenoid curve
 N = 7; % number of joints
@@ -45,5 +54,5 @@ plot([servoangle;servoangle],'-o')
 hold on
 plot([fit_curve;fit_curve])
 legend 'servoangle' 'fit curve' location best
-
+%}
 
