@@ -3,7 +3,7 @@
 
 
 
-| This project is based on the MathWorks-Excellence-in-Innovation project: [Snake-like Robot Modeling and Navigation](https://github.com/mathworks/MathWorks-Excellence-in-Innovation/tree/main/projects/Snake-like%20Robot%20Modeling%20and%20Navigation). The goal is to construct a Simscape Multibody assembly of a snake-like robot and develop an autonomous controller to navigate the robot. | <p align="center"> <img src="./images/snake-img.png" width="350" title="snake path"> </p> |
+| This project is based on the MathWorks-Excellence-in-Innovation project: [Snake-like Robot Modeling and Navigation](https://github.com/mathworks/MathWorks-Excellence-in-Innovation/tree/main/projects/Snake-like%20Robot%20Modeling%20and%20Navigation). The goal is to make a Simscape Multibody assembly of a snake-like robot and develop an autonomous controller to navigate the robot. | <p align="center"> <img src="./images/snake-img.png" width="350" title="snake path"> </p> |
 |:--------------|:-------------:|
 
 
@@ -43,7 +43,7 @@ This is an example of a well defined path :
 The waypoints are set through the waypoints tab in the model.
 
 ## How does it work ?
-Like real snakes, the robot uses anisotropic friction with the ground to move and steer. Anisotropic friction is mandadory in order to be able to control it. I used wheels for this purpose. I also tried to model the anisotropic friction without wheels, you can explore the [Tests](https://github.com/Antoine-ms/Snake-Robot/tree/main/Tests) folder. I succeded in modeling the anisotropic friction, but I was not able to get the snake to properly move. 
+Like real snakes, the robot uses anisotropic friction with the ground to move and steer. Anisotropic friction is mandadory in order to be able to control it. I used wheels for this purpose. I also tried to model the anisotropic friction without wheels, you can explore the [Tests](https://github.com/Antoine-ms/Snake-Robot/tree/main/Tests) folder. I succeded in modeling the anisotropic friction without the wheels, but I was not able to get the snake to properly move. Moreover, wheels are easier to simulate and easier to implement in a real build. However, they are very resources demanding in a simulation.
 
 The serpentine motion is implemented using a sine wave with a offset (phase) for each joint. Each joint uses a PID controller. 
 
