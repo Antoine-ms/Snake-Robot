@@ -1,6 +1,8 @@
 
 % Plot the joint position and desired position overtime
 % Useful to check and tune the performance of the PID controllers
+% "pos" : actual joint position (rad)
+% "des" : desired joint position (rad)
 
 figure
 
