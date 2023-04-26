@@ -17,19 +17,26 @@ In order to properly run the project, the following are needed :
 - Stateflow
 
 ## How to use the model
-In order to test the model, the minimal requirement is to download the [Snake_Robot_v4 model](Snake_Robot_v4.slx). However, it is better to also download the [joint_control_analysis](joint_control_analysis.m) and [snake_path_analysis](snake_path_analysis.mlx) scripts for a better understanding of its behavior. 
+In order to test the model, the minimal requirement is to download the [Snake_Robot_v4 model](Snake_Robot_v4.slx). However, it is better to also download the [joint_control_analysis](joint_control_analysis.m) and [snake_path_analysis](snake_path_analysis.mlx) scripts for a better understanding of its behavior:
 
-The robot can be controller either automatically or manually using the switch. The mode can be changed from auto to manual during the simulation, but doing the opposite sometimes causes some issues.
+- *joint_control_analysis* is used to analyze the behavior of each joint. It plots one figure per joint with the comparison of the desired position and the actual position of the joint over time.
+- *snake_path_analysis* is used to analyze the path of the snake and the behavior of the navigation algorithm. It plots three graphs. The first one is the path of the snake overtime and the defined waypoints. The second one is a comparison of the actual direction and desired direction of the snake over time. The last one is for checking that the custom unwrap block works properly. It is a plot of the heading angle before and after the unwrap block. 
 
-A demo of the snake working in autonomous mode is available [here](snake-robot-video.avi)
 
-### - Manual mode
+The robot can be controller either automatically or manually using the switch. The mode can be changed from auto to manual during the simulation, but **doing the opposite sometimes causes some issues**.
+
+Here is a preview of the snake working in autonomous mode:
+
+https://user-images.githubusercontent.com/113728365/234494054-d72cbcf5-38b2-45fc-a58d-7ca29e69785d.mp4
+
+
+### - Manual navigation
 Once the switch is set to manual mode, you can control the direction of the snake using the knob :
 <p align="center">
   <img src="./images/mode-selection.png" width="350" title="manual mode">
 </p>
 
-### - Automatic mode
+### - Autonomous navigation
 For the autonomous navigation, the path is defined by waypoints. It is important that the path defined by the waypoints is as smooth as possible.
 
 **Consecutive waypoints must not have an angle > 90 degres !**
